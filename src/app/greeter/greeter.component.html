@@ -1,0 +1,19 @@
+<h1>Hello from {{greeter}}</h1>
+<p>My favorite number is {{favoriteNumber}}</p>
+
+<h1>Character Details for {{greeter | uppercase}}</h1>
+
+<button (click)="toggleStory()">{{buttonText}}</button>
+<div *ngIf="showStory">
+    <app-back-story></app-back-story>
+</div>
+
+
+<hr>
+<h3>Weapons</h3>
+<ul>
+    <li *ngFor="let weapon of weapons">{{weapon | lowercase}}</li>
+</ul>
+
+<p>Current gold: {{goldAmount | currency}}</p>
+<p>Current health: {{healthPercent | percent}}</p>

@@ -1,0 +1,21 @@
+
+
+<h1>Welcome to the {{dungeonName}} dungeon</h1>
+<ul>
+    <li *ngFor="let monster of monsters">{{monster}}</li>
+</ul>
+
+<form #dungeonNameForm="ngForm" (ngSubmit)="changeDungeonName(dungeonNameForm)">
+    <label for="dungeon">What is the dungeon name?</label>
+    <input name="dungeon" id="dungeon" ngModel />
+    <button>Submit</button>
+</form>
+
+<p>Dungeon Difficulty: {{difficulty}}</p>
+<p *ngIf="treasure >0">Treasure Amount : {{treasure | currency}}</p>
+<p *ngIf="treasure == 0">Brad says you get NOTHING!</p>
+
+<div *ngIf="showBoss">
+    <app-boss-monster></app-boss-monster>
+</div>
+<button (click) ="toggleInfo()">{{buttonText}}</button>   

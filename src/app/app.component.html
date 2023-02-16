@@ -1,0 +1,31 @@
+
+<app-dungeon></app-dungeon>
+
+
+<h1>Welcome to my {{ title }} application {{userName}}</h1>
+<h2>{{headerText}}</h2>
+<p>There are {{components.length}} components in this app.</p>
+<div *ngFor="let name of components; index as i">
+  <div> {{i+1}} {{name}} </div>
+  <button (click)="changeTitle(name)">Click Me</button>
+</div>
+
+<form #nameForm="ngForm" (ngSubmit)="addName(nameForm)">
+  <label for="name">Enter a name!</label>
+ <input name="name" id="name" ngModel />
+ <button>Add to List</button>
+</form>
+
+<div>
+  <form #userNameForm="ngForm" (ngSubmit)="addUserName(userNameForm)">
+    <label for="name">What is your name.</label>
+    <input name="name" id="name" ngModel/>
+    <button>Submit Me</button>
+  </form>
+</div>
+
+<app-greeter greeter="Samuel" [favoriteNumber]="12"></app-greeter>
+<hr>
+<app-greeter greeter="Juliet" [favoriteNumber]="10+6"></app-greeter>
+
+
