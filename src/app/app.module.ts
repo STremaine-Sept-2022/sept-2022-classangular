@@ -7,6 +7,8 @@ import { GreeterComponent } from './greeter/greeter.component';
 import { BackStoryComponent } from './back-story/back-story.component';
 import { DungeonComponent } from './dungeon/dungeon.component';
 import { BossMonsterComponent } from './boss-monster/boss-monster.component';
+import { BossMonstersModule } from './boss-monsters/boss-monsters.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { BossMonsterComponent } from './boss-monster/boss-monster.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BossMonstersModule,
+    CoreModule
     ],
   providers: [],
   bootstrap: [AppComponent]
