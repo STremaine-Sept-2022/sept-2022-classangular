@@ -1,0 +1,7 @@
+<div>
+    <h3>Classes</h3>
+    <div *ngFor="let class of characterClasses.results">
+        <h3>{{class.name | uppercase}}</h3>
+        <app-character-class-details index={{class.index}}></app-character-class-details>
+    </div>
+</div>

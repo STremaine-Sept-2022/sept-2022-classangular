@@ -9,6 +9,8 @@ import { DungeonComponent } from './dungeon/dungeon.component';
 import { BossMonsterComponent } from './boss-monster/boss-monster.component';
 import { BossMonstersModule } from './boss-monsters/boss-monsters.module';
 import { CoreModule } from './core/core.module';
+import {HttpClientModule} from '@angular/common/http';
+import { CharacterClassModule } from './character-class/character-class.module';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,11 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     BossMonstersModule,
-    CoreModule
+    CoreModule,
+    CharacterClassModule
     ],
   providers: [],
   bootstrap: [AppComponent]

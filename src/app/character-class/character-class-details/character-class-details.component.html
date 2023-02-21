@@ -1,0 +1,17 @@
+<h4>Class Details</h4>
+    <dl>
+        <dt>Hit Die</dt>
+        <dd>{{classDetails?.hit_die}}</dd>
+        <dt>Starting Equipment</dt>
+        <dd>
+            <div *ngFor="let equipment of classDetails?.starting_equipment">
+                <li>{{equipment.equipment.name}} ({{equipment.quantity}})</li>
+            </div>
+        </dd>
+        <dt>Proficiences</dt>
+        <dd>
+            <div *ngFor="let proficiencie of classDetails?.proficiencies">
+                <li>{{proficiencie.name}} </li>
+            </div>
+        </dd>
+    </dl>
